@@ -1,0 +1,35 @@
+{
+  "name": "nodemailer-markdown",
+  "version": "0.1.0",
+  "description": "Markdown content for Nodemailer",
+  "main": "src/nodemailer-markdown.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andris9/nodemailer-markdown.git"
+  },
+  "keywords": [
+    "Nodemailer",
+    "markdown"
+  ],
+  "author": "Andris Reinman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andris9/nodemailer-markdown/issues"
+  },
+  "homepage": "https://github.com/andris9/nodemailer-markdown",
+  "dependencies": {
+    "marked": "^0.3.2"
+  },
+  "devDependencies": {
+    "chai": "~1.8.1",
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-mocha-test": "~0.10.0"
+  }
+}
