@@ -9,11 +9,12 @@ chai.Assertion.includeStack = true;
 describe('nodemailer-markdown tests', function() {
     it('should set html and text from markdown', function(done) {
         var plugin = markdown();
-        plugin({
+        var mail = {
             data: {
                 markdown: 'Tere **vana kere**!'
             }
-        }, function(err, mail) {
+        };
+        plugin(mail, function(err) {
             expect(err).to.not.exist;
             expect(mail).to.deep.equal({
                 data: {
@@ -28,11 +29,12 @@ describe('nodemailer-markdown tests', function() {
 
     it('should keep images as is', function(done) {
         var plugin = markdown();
-        plugin({
+        var mail = {
             data: {
                 markdown: 'Tere ![Alt text](/path/to/img.jpg)!'
             }
-        }, function(err, mail) {
+        };
+        plugin(mail, function(err) {
             expect(err).to.not.exist;
             expect(mail).to.deep.equal({
                 data: {
@@ -50,11 +52,12 @@ describe('nodemailer-markdown tests', function() {
             useEmbeddedImages: true,
             cidBase: 'abc'
         });
-        plugin({
+        var mail = {
             data: {
                 markdown: 'Tere ![Alt text](/path/to/img.jpg)!'
             }
-        }, function(err, mail) {
+        };
+        plugin(mail, function(err) {
             expect(err).to.not.exist;
             expect(mail).to.deep.equal({
                 data: {

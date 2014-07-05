@@ -30,7 +30,7 @@ function Markdown(options, renderer) {
 
 Markdown.prototype.process = function(mail, callback) {
     if (!mail || !mail.data || !mail.data.markdown || mail.data.html) {
-        return callback(null, mail);
+        return callback();
     }
 
     this._mail = mail || {};
@@ -43,7 +43,7 @@ Markdown.prototype.process = function(mail, callback) {
             mail.data.text = markdown;
         }
 
-        callback(null, mail);
+        callback(null);
     }.bind(this));
 };
 
