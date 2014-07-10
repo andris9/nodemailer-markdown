@@ -58,7 +58,7 @@ Markdown.prototype._updateRenderer = function() {
 Markdown.prototype._createImage = function(href) {
     var cid = (this._options.cidBase || crypto.randomBytes(8).toString('hex')) + '-' + (++this._imageCount) + '@localhost';
     var image = {
-        filePath: href,
+        path: href,
         cid: cid
     };
 

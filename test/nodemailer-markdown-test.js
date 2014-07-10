@@ -63,7 +63,7 @@ describe('nodemailer-markdown tests', function() {
                 data: {
                     markdown: 'Tere ![Alt text](/path/to/img.jpg)!',
                     attachments: [{
-                        filePath: '/path/to/img.jpg',
+                        path: '/path/to/img.jpg',
                         cid: 'abc-1@localhost'
                     }],
                     html: '<p>Tere <img src="cid:abc-1@localhost" alt="Alt text">!</p>\n',
