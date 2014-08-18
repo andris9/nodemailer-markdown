@@ -35,15 +35,25 @@ Markdown.prototype.process = function(mail, callback) {
 
     this._mail = mail || {};
 
-    var markdown = (mail.data.markdown || '').toString();
-    marked(markdown, this._options, function(err, html) {
-        mail.data.html = html;
-
-        if (!mail.data.text) {
-            mail.data.text = markdown;
+    mail.resolveContent(mail.data, 'markdown', function(err, markdown) {
+        if (err) {
+            return callback(err);
         }
 
-        callback(null);
+        markdown = (markdown || '').toString();
+        marked(markdown, this._options, function(err, html) {
+            if (err) {
+                return callback(err);
+            }
+
+            mail.data.html = html;
+
+            if (!mail.data.text) {
+                mail.data.text = markdown;
+            }
+
+            callback(null);
+        }.bind(this));
     }.bind(this));
 };
 
