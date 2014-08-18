@@ -10,13 +10,13 @@ Install from npm
 
 ## Usage
 
-### 1. Load the `markdown` function
+#### 1. Load the `markdown` function
 
 ```javascript
 var markdown = require('nodemailer-markdown').markdown;
 ```
 
-### 2. Attach it as a 'compile' handler for a nodemailer transport object
+#### 2. Attach it as a 'compile' handler for a nodemailer transport object
 
 ```javascript
 nodemailerTransport.use('compile', markdown(options))
@@ -27,7 +27,9 @@ Where
   * **options** - includes options for the [marked](https://www.npmjs.org/package/marked) parser with the following additions:
       * **useEmbeddedImages** - if true, load or download referenced images and include these as attachments
 
-### 3. Set a `markdown` value. Any nodemailer content value is valid.
+#### 3. Set a `markdown` value
+
+Any nodemailer content value can be used: String, Buffer, Stream or an object in the form of {path: filepath/url}
 
 ```javascript
 var mailOptions1 = {
