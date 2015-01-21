@@ -1,4 +1,4 @@
-# Mardown plugin for Nodemailer
+# Markdown plugin for Nodemailer
 
 This applies to Nodemailer v1.0+. This plugin adds an option `markdown` for the Nodemailer e-mail options. This value will be used to populate `text` and `html` so you don't have to.
 
