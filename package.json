@@ -1,6 +1,6 @@
 {
   "name": "nodemailer-markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Markdown content for Nodemailer",
   "main": "src/nodemailer-markdown.js",
   "directories": {
@@ -27,9 +27,11 @@
     "marked": "^0.3.6"
   },
   "devDependencies": {
-    "chai": "~1.8.1",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-mocha-test": "~0.10.0"
+    "chai": "~3.5.0",
+    "grunt": "~1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-mocha-test": "~0.12.7",
+    "mocha": "^3.0.2"
   }
 }
