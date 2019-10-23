@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/andris9/nodemailer-markdown",
   "dependencies": {
-    "marked": "^0.6.2"
+    "marked": "^0.7.0"
   },
   "devDependencies": {
     "chai": "~4.2.0",
